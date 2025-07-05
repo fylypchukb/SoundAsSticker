@@ -27,7 +27,7 @@ public class TelegramBot(ILogger<TelegramBot> logger, UpdateService updateServic
                 return response;
             }
 
-            await updateService.EchoAsync(update);
+            await updateService.ProcessMessage(update);
         }
         catch (Exception e)
         {
